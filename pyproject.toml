@@ -1,0 +1,38 @@
+# filepath: /home/dostavro/ttcc_sim/pyproject.toml
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ttcc_sim"
+version = "0.1.0"
+description = "TTCC Scheduler Simulation for AI workloads on 6G Testbeds"
+authors = [
+    {name = "Donatos Stavropoulos", email = "dostavro@gmail.com"}
+]
+readme = "README.md"
+requires-python = ">=3.8"
+dependencies = [
+    "numpy",
+    "matplotlib",
+]
+
+[project.optional-dependencies]
+test = [
+    "pytest>=6.0",
+    "pytest-cov",
+]
+
+# For flat structure: treat root directory as the package
+[tool.setuptools]
+py-modules = ["simulator", "cluster", "jobs", "metrics", "workload", "experiments"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+python_classes = ["Test*"]
+python_functions = ["test_*"]
+pythonpath = [
+    ".",
+    "tests"
+]

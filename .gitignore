@@ -1,0 +1,49 @@
+# Virtual environments
+venv/
+.venv/
+env/
+ENV/
+*.egg-info/
+dist/
+build/
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# IDE & editor settings
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Simulation & analysis outputs
+*.json
+*.csv
+*.png
+*.pdf
+
+# Experiment artifacts
+results/
+figures/
+logs/
+*.log
+
+# Virtual environment activation files
+pyvenv.cfg
+bin/
+lib/
+lib64/
+include/
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb
+
+# OS
+.DS_Store
+Thumbs.db
